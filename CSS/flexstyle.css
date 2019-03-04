@@ -22,6 +22,7 @@ body {
     background-image: url(bg.jpg);
   background-position: right bottom 20%;
   max-width:1200px;
+  
 }
 
 p {
@@ -40,8 +41,9 @@ p {
   }
 }
 
-a:visited {
+a:link a:visited {
 	color:white;
+	text-decoration: none;
 }
 
 
@@ -121,7 +123,7 @@ font-size: 3.25em;
 .main {
   flex: 70%;
   background-color: white;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Fake image, just for this example */
@@ -131,11 +133,64 @@ font-size: 3.25em;
   padding: 20px;
 }
 
+.mainimg {
+	width:100%;
+	min-height: 325px;
+	padding:0;
+	overflow:hidden;
+	background-color: #fff ;
+	text-decoration:none;
+	background-color: rgba(46, 54, 64, 1.0);
+}
+
+.contents {
+	text-align: right;
+	text-decoration: none;
+}
+
+.contents a {
+		text-decoration:none;
+		color: white;
+		padding-right: 50px;
+}
+
+.mainimg img {
+	float:left;
+	width:375px;
+
+}
+
+#contents_header {
+	color: rgba(239, 121, 47, 1.0)
+	text-align: right;
+	padding-right: 50px;
+}
+
+.mainarticle {
+		width:100%;
+		column-rule-style:none;
+	column-gap: 40px;
+		-moz-column-count: 2;
+	-webkit-column-count:2;
+	column-count: 2;
+	text-align: justify;
+}
+
 .headline {
 	display: inline-block;
 	margin: auto;
-	
+	}
+
+.span {
+	text-align: center;
+	color: rgba(142, 161, 56, 1.0);
+	-webkit-column-span: all; /* Chrome, Safari, Opera */
+  column-span: all;
 }
+
+
+
+
 
 .issue_box p {
 	line-height: .9em;

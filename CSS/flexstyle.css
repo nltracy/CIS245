@@ -1,0 +1,184 @@
+/*******************************
+This CSS stylesheet borrows heavily from W3Schools
+Flexbox tutorials
+All original work done by:
+
+Nathan Tracy
+CIS 245 Winter 2019
+Edmonds Community College
+Final Project Demo
+********************************/
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+  margin: auto;
+    background-image: url(bg.jpg);
+  background-position: right bottom 20%;
+  max-width:1200px;
+}
+
+p {
+	font-size: 0.875em;
+	line-height:1.5em;
+}
+
+/*Text glow effect*/
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 18px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+a:visited {
+	color:white;
+}
+
+
+/* Header/logo Title */
+.header {
+  padding: .1px; /* Fix some layout issues */
+  text-align: center;
+  color: white;
+  height: 170px;
+font-size: 3.25em;
+}
+
+.header-bg {
+	 background-image: linear-gradient(rgba(142,161,56, 1.0), rgba(198, 200, 49, 1.0));
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-basis: 5em;
+}
+
+
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  border-style: solid;
+  border-width: 0px 3px 0px 0px
+  }
+.navbar a:last-child {
+	border-style: none;
+}
+
+
+/* Change color on hover */
+.navbar a:hover {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  /*font-size:125%;*/
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: rgba(46, 54, 64, 1.0);
+  	padding-top: 60px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+  color:white;
+  line-height: 1.75em;
+  text-align: justify;
+}
+
+.side h2, h3 {
+	color: rgba(239, 121, 47, 1.0);
+}
+
+.side h3 {
+	text-transform: uppercase;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+.headline {
+	display: inline-block;
+	margin: auto;
+	
+}
+
+.issue_box p {
+	line-height: .9em;
+}
+
+.tagline {
+	text-transform:uppercase;
+	text-align:right;
+}
+
+/* Footer */
+.footer {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+color: white;
+  background-image: url(img/b2_bottom_left.jpg);
+  background-repeat:no-repeat;
+  background-position: right bottom;
+  background-color: #ff3300;
+}
+
+.footer a {
+  color: white;
+  }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar .header{   
+    flex-direction: column;
+  }
+  
+  .header {
+  padding: .1px; /* Fix some layout issues */
+  text-align: center;
+  color: white;
+  height: 70px;
+  display: flex;
+  font-size: 1.25em;
+  }
+  .headline {
+	  display: flex;
+	  margin: auto;
+	  }
+}

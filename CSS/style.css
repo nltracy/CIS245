@@ -1,0 +1,209 @@
+/*Nathan Tracy
+CIS 245 Final Project
+Winter 2019*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+	
+}
+
+p {
+	font-size: 0.875em;
+	line-height:1.5em;
+}
+
+
+/*CSS FOR MOBILE DEVICES */
+@media only screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  
+/* Column Sizes to choose from */  
+  
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  
+  /* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+} /* End Small screen */
+
+  /* For desktop or both: */
+/* Column Sizes to choose from */  
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+
+.row1 {
+	display:grid;
+	grid:
+		'header header'
+		'info_column main_pic'
+				'info_column main'
+		'footer footer';
+	grid-gap:0px;
+	grid-template-columns: 200px, 800px; 
+}
+
+.wrapper {
+	max-width: 1000px;
+	-webkit-align-content:center;
+	margin:auto;
+}
+
+.footer {
+	background-image: url("/img/b2_bottom_left.jpg");
+	background-repeat: repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 0;
+	height:150px;
+}
+.header {
+	background-image: linear-gradient(rgba(142,161,56, 1.0), rgba(198, 200, 49, 1.0));
+	height: 175px;
+	width:100%;
+	vertical-align: center;
+	z-index: 111;
+}
+
+a, a:visited {
+	color:rgba(239, 121, 47, 1.0);
+	text-decoration:none;
+}
+
+
+.header h1 {
+font: Arial, sans-serif;
+}
+
+.main_title {
+	position:absloute;
+	right: 0px;
+	top: 15px;
+	font-size: 3.25em;
+text-align: right;
+color: white;
+}
+.headline {
+	display: inline-block;
+}
+
+.tagline {
+	text-transform:uppercase;
+	text-align:right;
+}
+
+.main {
+
+	margin: 0px;
+	text-align:center;
+
+}
+
+.article_head {
+text-align: center;
+color: rgba(142, 161, 56, 1.0);
+
+}
+
+.main_article {
+	width:100%;
+		column-rule-style:none;
+	column-gap: 40px;
+		-moz-column-count: 2;
+	-webkit-column-count:2;
+	column-count: 2;
+}
+
+
+.main p {
+text-indent: 0;
+text-align:justify;
+line-height:1.5em;
+}
+
+.main_pic {
+	
+	float:left;
+	background: rgba(46, 54, 64, 1.0);
+	color: white;
+	width: 740px;
+	height:;
+	padding: 0;
+	margin:0;
+}
+
+.main_pic img {
+	position: relative;
+	
+	z-index:2;
+	/*clip: rect(100px, 110px,110px, 110px);*/
+}
+
+
+
+.info_column {
+	position:static;
+	background: rgba(46, 54, 64, 1.0);
+	color: white;
+	padding: 30px;
+	
+	float:left;
+	width: 200px;
+	text-align:justify;
+}
+
+.info_column h2, h3 {
+	color: rgba(239, 121, 47, 1.0);
+}
+
+.info_column h3 {
+	text-transform: uppercase;
+}
+
+.img1 img {
+	position: absolute;
+	display:block;
+	float:left;
+	z-index: -1;
+	
+}
+
+.b_card_big {
+}
+.b_card_small {
+}
+
+.main_pic h1 h2 h3 {
+	color: white;
+}

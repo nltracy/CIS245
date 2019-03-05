@@ -22,6 +22,7 @@ body {
     background-image: url(bg.jpg);
   background-position: right bottom 20%;
   max-width:1200px;
+  min-width: 25em;
   
 }
 
@@ -51,6 +52,7 @@ a:link a:visited {
 .header {
   padding: .1px; /* Fix some layout issues */
   text-align: center;
+  align-items:center;
   color: white;
   height: 170px;
 font-size: 3.25em;
@@ -64,7 +66,6 @@ font-size: 3.25em;
 .navbar {
   display: flex;
   justify-content: center;
-  flex-basis: 5em;
 }
 
 
@@ -85,7 +86,7 @@ font-size: 3.25em;
 
 /* Change color on hover */
 .navbar a:hover {
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
   /*font-size:125%;*/
@@ -134,11 +135,11 @@ font-size: 3.25em;
 }
 
 .mainimg {
+	display:flex;
 	width:100%;
 	min-height: 325px;
 	padding:0;
 	overflow:hidden;
-	background-color: #fff ;
 	text-decoration:none;
 	background-color: rgba(46, 54, 64, 1.0);
 }
@@ -151,7 +152,7 @@ font-size: 3.25em;
 .contents a {
 		text-decoration:none;
 		color: white;
-		padding-right: 50px;
+		padding-right: 30px;
 }
 
 .mainimg img {
@@ -162,8 +163,11 @@ font-size: 3.25em;
 
 #contents_header {
 	color: rgba(239, 121, 47, 1.0)
-	text-align: right;
+	align-items: right;
+	text-align:right;
 	padding-right: 50px;
+	padding-top: 50px;
+		
 }
 
 .mainarticle {
@@ -219,9 +223,13 @@ color: white;
   }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row, .navbar .header{   
+@media screen and (max-width: 750px) {
+  .row, .navbar .header .footer{  
     flex-direction: column;
+  }
+  .navbar {
+	  float: none;
+	  flex-wrap:wrap;
   }
   
   .header {
@@ -233,7 +241,45 @@ color: white;
   font-size: 1.25em;
   }
   .headline {
+	  -webkit-display: flex;
 	  display: flex;
 	  margin: auto;
 	  }
+.mainarticle {
+		width:100%;
+		column-rule-style:none;
+	column-gap: 40px;
+		-moz-column-count: 1;
+	-webkit-column-count:1;
+	column-count: 1;
+	text-align: justify;
+}
+
+.contents {
+	text-align: center;
+	display:block;
+	float:none;
+	text-decoration: none;
+}
+
+.mainimg img {
+	float:none;
+	display:block;
+	align-items:center;
+	width:375px;
+
+}
+
+.contents a {
+		text-decoration:none;
+		color: white;
+}
+	#contents_header {
+	color: rgba(239, 121, 47, 1.0)
+	display:block;
+	float:none;
+	text-align:center;
+	margin:auto;		
+}
+	
 }
